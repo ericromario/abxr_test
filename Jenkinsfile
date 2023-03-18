@@ -10,7 +10,7 @@ pipeline {
     agent none
     stages {
        stage('Build image') {
-           agent any
+           agent none
            steps {
               script {
                 sh 'docker build -t ${DOCKERHUB_ID}/$IMAGE_NAME:$IMAGE_TAG .'
@@ -18,7 +18,7 @@ pipeline {
            }
        }
        stage('Run container based on builded image') {
-          agent any
+          agent none
           steps {
             script {
               sh '''
@@ -31,7 +31,7 @@ pipeline {
           }
        }
        stage('Test image') {
-           agent any
+           agent none
            steps {
               script {
                 sh '''
@@ -41,7 +41,7 @@ pipeline {
            }
        }
        stage('Clean container') {
-          agent any
+          agent none
           steps {
              script {
                sh '''
@@ -53,7 +53,7 @@ pipeline {
       }
 
       stage ('Login and Push Image on docker hub') {
-          agent any
+          agent none
           steps {
              script {
                sh '''
