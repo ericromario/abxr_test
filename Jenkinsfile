@@ -30,6 +30,16 @@ pipeline {
              }
           }
        }
+           stage('Test image') {
+           agent any
+           steps {
+              script {
+                sh '''
+                   curl localhost | grep -i "Learn Vue.js"
+                '''
+              }
+           }
+       }
     
        stage('Clean container') {
           agent any
