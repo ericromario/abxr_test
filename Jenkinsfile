@@ -2,7 +2,7 @@ pipeline {
     environment {
         IMAGE_NAME = "abxr-app"
         APP_CONTAINER_PORT = "80"
-        APP_EXPOSED_PORT = "8083"
+        APP_EXPOSED_PORT = "80"
         IMAGE_TAG = "latest"
         DOCKERHUB_ID = "303400"
         DOCKERHUB_PASSWORD = credentials('dockerhub_password')
