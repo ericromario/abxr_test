@@ -35,7 +35,7 @@ pipeline {
            steps {
               script {
                 sh '''
-                   curl 172.17.0.1 | grep -i "Learn Vue.js"
+                   curl http://ip10-0-0-3-cgbjtk4b8go0qbn4jah0-8083.direct.docker.labs.eazytraining.fr/ | grep -i "Learn Vue.js"
                 '''
               }
            }
