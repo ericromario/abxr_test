@@ -35,7 +35,8 @@ pipeline {
            steps {
               script {
                 sh '''
-                   curl localhost | grep -i "Learn Vue.js"
+                   curl localhost | grep -i "Learn Vue.js" 
+                   sleep 5
                 '''
               }
            }
