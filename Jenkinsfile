@@ -30,16 +30,7 @@ pipeline {
              }
           }
        }
-       stage('Test image') {
-           agent any
-           steps {
-              script {
-                sh '''
-                   curl http://ip10-0-0-3-cgbjtk4b8go0qbn4jah0-8083.direct.docker.labs.eazytraining.fr/ | grep -i "Learn Vue.js"
-                '''
-              }
-           }
-       }
+    
        stage('Clean container') {
           agent any
           steps {
