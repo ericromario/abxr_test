@@ -37,8 +37,7 @@ pipeline {
                 sh '''
                     set +e
                    curl localhost | grep -i "Learn Vue.js" 
-                   set -e
-                   
+              
                 '''
               }
            }
